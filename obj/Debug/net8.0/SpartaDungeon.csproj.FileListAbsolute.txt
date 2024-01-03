@@ -1,0 +1,17 @@
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\bin\Debug\net8.0\SpartaDungeon.exe
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\bin\Debug\net8.0\SpartaDungeon.deps.json
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\bin\Debug\net8.0\SpartaDungeon.runtimeconfig.json
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\bin\Debug\net8.0\SpartaDungeon.dll
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\bin\Debug\net8.0\SpartaDungeon.pdb
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.GeneratedMSBuildEditorConfig.editorconfig
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.AssemblyInfoInputs.cache
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.AssemblyInfo.cs
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.csproj.CoreCompileInputs.cache
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.dll
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\refint\SpartaDungeon.dll
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.pdb
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.genruntimeconfig.cache
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\ref\SpartaDungeon.dll
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.csproj.AssemblyReference.cache
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.csproj.CopyComplete
