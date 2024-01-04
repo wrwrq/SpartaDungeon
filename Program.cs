@@ -362,26 +362,41 @@ class Player
     {
         for (int i = 0; i < inven.Length; i++)
         {
-            if (inven[i] != null)
+            if (inven[i] == null)
             {
-                continue;
-            }
-            for (int p = inven.Length - 1; p > 0; p--)
-            {
-                if (inven[i] == null && inven[p] != null)
+                for (int p = inven.Length - 1; p > 0; p--)
                 {
-                    EquipItem temp = inven[i];
-                    inven[i] = inven[p];
-                    inven[p] = temp;
-                    break;
-                }
-                if (i == p)
-                {
-                    return;
+                    if (inven[p] != null)
+                    {
+                        EquipItem temp = inven[i];
+                        inven[i] = inven[p];
+                        inven[p] = temp;
+                        break;
+                    }
                 }
             }
         }
     }
+    //public void SortInven()
+    //{
+    //    for (int i = 0; i < inven.Length; i++)
+    //    {
+    //        if (inven[i] != null)
+    //        {
+    //            continue;
+    //        }
+    //        for (int p = inven.Length - 1; p > 0; p--)
+    //        {
+    //            if (inven[p] != null)
+    //            {
+    //                EquipItem temp = inven[i];
+    //                inven[i] = inven[p];
+    //                inven[p] = temp;
+    //                break;
+    //            }
+    //        }
+    //    }
+    //}
     public void UserStatus()
     {
         while (true)
