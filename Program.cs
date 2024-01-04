@@ -263,6 +263,7 @@ class Shop
             Console.WriteLine(p.gold + " G");
             Console.WriteLine("");
             Console.WriteLine("[아이템 목록]");
+            p.SortInven();
             for (int i = 0; i < p.inven.Length; i++)
             {
                 if (p.inven[i] == null)
@@ -357,6 +358,26 @@ class Player
         get { return _gold; }
     }
     public EquipItem[] inven { get; set; }
+    public void SortInven()
+    {
+        for (int i = 0; i < inven.Length; i++)
+        {
+            for (int p = inven.Length - 1; p > 0; p--)
+            {
+                if (inven[i] == null && inven[p] != null)
+                {
+                    EquipItem temp = inven[i];
+                    inven[i] = inven[p];
+                    inven[p] = temp;
+                    break;
+                }
+                if (i == p)
+                {
+                    return;
+                }
+            }
+        }
+    }
     public void UserStatus()
     {
         while (true)
@@ -388,6 +409,7 @@ class Player
     }
     public void PrintInven()
     {
+        SortInven();
         while (true)
        {
             if (choiceMode)
@@ -474,10 +496,20 @@ class Player
         switch (it.ty)
         {
             case EquipItem.Type.Weapon:
-                weaponSlot = weaponSlot == it ? null : it;
+                if (weaponSlot != null)
+                {
+                    weaponSlot = weaponSlot.name == it.name ? null : it;
+                    break;
+                }
+                weaponSlot = it;
                 break;
             case EquipItem.Type.Armor:
-                armorSlot = armorSlot == it ? null : it;
+                if (armorSlot != null)
+                {
+                    armorSlot = armorSlot.name == it.name ? null : it;
+                    break;
+                }
+                armorSlot = it;
                 break;
         }
     }
@@ -486,10 +518,18 @@ class Player
         switch (it.ty)
         {
             case EquipItem.Type.Weapon:
-                weaponSlot = weaponSlot == it ? null : weaponSlot;
+                if (weaponSlot == null)
+                {
+                    break;
+                }
+                weaponSlot = weaponSlot.name == it.name ? weaponSlot = null : weaponSlot;
                 break;
             case EquipItem.Type.Armor:
-                armorSlot = armorSlot == it ? null : armorSlot;
+                if (armorSlot == null)
+                {
+                    break;
+                }
+                armorSlot = armorSlot.name == it.name ? null : armorSlot;
                 break;
         }
     }
