@@ -403,7 +403,7 @@ class Player
                         break;
                     }
                     Console.Write("- " + (i + 1) + " ");
-                    if (inven[i].name == armorSlot.name || inven[i].name == weaponSlot.name)
+                    if (inven[i].name == (armorSlot == null ? "no" : armorSlot.name) || inven[i].name == (weaponSlot == null ? "no" : weaponSlot.name))
                     {
                         Console.Write("[E]");
                     }
@@ -443,7 +443,7 @@ class Player
                     break;
                 }
                 Console.Write("- ");
-                if (inven[i].name == armorSlot.name || inven[i].name == weaponSlot.name)
+                if (inven[i].name == (armorSlot == null ? "no" : armorSlot.name)  || inven[i].name == (weaponSlot == null ? "no" : weaponSlot.name))
                 {
                     Console.Write("[E]");
                 }
@@ -564,6 +564,14 @@ class Dungeon
     {
         while (true)
         {
+            if (p.hp <= 0)
+            {
+                Console.Clear();
+                Console.WriteLine("부상을 치유해야 합니다");
+                Console.ReadKey();
+                Program.wh = Program.Where.SpartaTown;
+                return;
+            }
             Console.Clear();
             Console.WriteLine("던전입장");
             Console.WriteLine("이곳에서 던전으로 들어가기전 활동을 할 수 있습니다.");
@@ -623,7 +631,15 @@ class Dungeon
                 return;
             }
         }
-        int tempp = (int)(Program.ran.Next((int)p.totalAtk, (int)p.totalAtk * 2 + 1) * 0.01f * treasure) + treasure;
+        int tempp;
+        if (p.atk % 1 == 0)
+        {
+            tempp = (int)(Program.ran.Next((int)p.totalAtk, (int)p.totalAtk * 2 + 1) * 0.01f * treasure) + treasure;
+        }
+        else
+        {
+            tempp = (int)((Program.ran.Next((int)p.totalAtk, (int)p.totalAtk * 2 + 1) + 0.5f) * 0.01f * treasure) + treasure;
+        }
         int a = rec - p.totalDef + Program.ran.Next(25, 36);
         int temp =  p.hp - (a < 0 ? 0 : a);
         q:
@@ -714,8 +730,8 @@ internal class Program
     {
         string player = File.ReadAllText("D\\consolegame0.json");
         string shop = File.ReadAllText("D\\consolegame1.json");
-        Player newP = JsonConvert.DeserializeObject<Player>(player);
-        Shop TownShop = JsonConvert.DeserializeObject<Shop>(shop);
+        Player? newP = JsonConvert.DeserializeObject<Player>(player);
+        Shop? TownShop = JsonConvert.DeserializeObject<Shop>(shop);
         Map SpartaTown = new Map(newP, TownShop);
         Dungeon dun = new Dungeon(newP);
         while (true)

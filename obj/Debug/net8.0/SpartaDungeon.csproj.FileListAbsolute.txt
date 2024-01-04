@@ -15,3 +15,4 @@ C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\ref\SpartaDungeon.dll
 C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.csproj.AssemblyReference.cache
 C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.csproj.CopyComplete
+C:\hhhhNonUnity\ConsoleApp1\SpartaDungeon\obj\Debug\net8.0\SpartaDungeon.sourcelink.json
