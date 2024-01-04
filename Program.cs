@@ -362,6 +362,10 @@ class Player
     {
         for (int i = 0; i < inven.Length; i++)
         {
+            if (inven[i] != null)
+            {
+                continue;
+            }
             for (int p = inven.Length - 1; p > 0; p--)
             {
                 if (inven[i] == null && inven[p] != null)
