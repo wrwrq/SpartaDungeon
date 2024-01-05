@@ -364,7 +364,7 @@ class Player
         {
             if (inven[i] == null)
             {
-                for (int p = inven.Length - 1; p > 0; p--)
+                for (int p = inven.Length - 1; p > i; p--)
                 {
                     if (inven[p] != null)
                     {
@@ -385,7 +385,7 @@ class Player
     //        {
     //            continue;
     //        }
-    //        for (int p = inven.Length - 1; p > 0; p--)
+    //        for (int p = inven.Length - 1; p > i; p--)
     //        {
     //            if (inven[p] != null)
     //            {
